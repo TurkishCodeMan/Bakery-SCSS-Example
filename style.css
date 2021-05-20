@@ -1,0 +1,176 @@
+body {
+  --navbarColor: #e6bf98;
+  --contentColor: #fff6e0;
+  --testimoTop: #00c4c7;
+  --textDarkPink: #c80060;
+  --bgBlue: #00cdd1;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: "Niconne", cursive;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 32px;
+  margin: 0;
+}
+
+.bakery {
+  background: url("img/clouds.png");
+  min-height: 100vh;
+  font-family: "Cabin", Arial, Geneva, sans-serif;
+}
+
+.bakery .wrapper {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .bakery .wrapper {
+    max-width: 780px;
+  }
+}
+
+.bakery header {
+  background: url("img/logo.png") no-repeat left top;
+  background-size: contain;
+  min-height: 20vh;
+}
+
+.bakery nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("img/scallop.png") repeat-x;
+}
+
+.bakery nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0.75em;
+  margin: 12px 0 0 0;
+  border-bottom: 3px solid #cc8850;
+  overflow: hidden;
+  background-color: var(--navbarColor);
+}
+
+.bakery nav .nav-list .nav-item {
+  list-style-type: none;
+  margin: 0% 4%;
+}
+
+.bakery nav .nav-list .nav-item a {
+  color: var(--textDarkPink);
+  text-decoration: none;
+}
+
+.bakery .content {
+  background: var(--contentColor);
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 30px;
+}
+
+@media screen and (min-width: 1280px) {
+  .bakery .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+.bakery .content .left-area {
+  margin-right: 4%;
+}
+
+.bakery .content .left-area p {
+  margin-bottom: 18px;
+}
+
+.bakery .content .left-area img {
+  float: right;
+  border-radius: 20px;
+}
+
+.bakery .content .right-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .bakery .content .right-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.bakery .content .right-area .testimonials {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  margin: 16px;
+}
+
+.bakery .content .right-area .testimonials .header {
+  background: var(--bgBlue);
+}
+
+.bakery .content .right-area .testimonials p {
+  border-width: 0px 1px 1px 1px;
+  border-color: var(--testimoTop);
+  border-style: solid;
+  padding: 4px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.bakery .content .right-area .pie-of-month {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  margin: 16px;
+}
+
+.bakery .content .right-area .pie-of-month .header {
+  background: var(--textDarkPink);
+}
+
+.bakery .content .right-area .pie-of-month img {
+  width: 100%;
+  max-height: 42%;
+  border-width: 0px 1px 1px 1px;
+  border-color: var(--textDarkPink);
+  border-style: solid;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

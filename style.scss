@@ -1,0 +1,133 @@
+@mixin large{
+    @media screen and (min-width:1280px) {//1280 e kadar geçerli sonrasında iptal 1281 ve sonrası
+        @content;
+    }
+}
+
+
+body {
+    --navbarColor: #e6bf98;
+    --contentColor: #fff6e0;
+    --testimoTop: #00c4c7;
+    --textDarkPink: #c80060;
+    --bgBlue: #00cdd1;
+    margin: 0;
+    padding: 0;
+}
+  h3 {
+    font-family: "Niconne", cursive;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 32px;
+  
+    margin: 0;
+  }
+  
+  .bakery {
+    background: url("img/clouds.png");
+    min-height: 100vh;
+    font-family: "Cabin", Arial, Geneva, sans-serif;
+    .wrapper {
+      margin: 0 auto;
+      @include large {
+        max-width: 780px;
+      }
+    }
+    header {
+      background: url("img/logo.png") no-repeat left top;
+      background-size: contain;
+      min-height: 20vh;
+    }
+    nav {
+      display: flex;
+      background: url("img/scallop.png") repeat-x;
+  
+      .nav-list {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+        padding: 0.75em;
+        margin: 12px 0 0 0;
+        border-bottom: 3px solid #cc8850;
+        overflow: hidden;
+        background-color: var(--navbarColor);
+        .nav-item {
+          list-style-type: none;
+          margin: 0% 4%;
+  
+          a {
+            color: var(--textDarkPink);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .content {
+      background: var(--contentColor);
+      color: black;
+      display: flex;
+      flex-flow: column;
+      @include large {
+        flex-flow: row;
+      }
+      padding: 30px;
+  
+      .left-area {
+        margin-right: 4%;
+        p {
+          margin-bottom: 18px;
+        }
+  
+        img {
+          float: right;
+          border-radius: 20px;
+        }
+      }
+      .right-area {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        @include large {
+          flex-flow: column;
+          justify-content: space-around;
+        }
+  
+        .testimonials {
+          flex: 0 0 25%;
+          margin: 16px;
+          .header {
+            background: var(--bgBlue);
+          }
+          p {
+            border-width: 0px 1px 1px 1px;
+            border-color: var(--testimoTop);
+            border-style: solid;
+            padding: 4px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+          }
+        }
+  
+        .pie-of-month {
+          flex: 0 0 25%;
+          margin: 16px;
+          .header {
+            background: var(--textDarkPink);
+          }
+          img {
+            width: 100%;
+            max-height: 42%;
+            border-width: 0px 1px 1px 1px;
+            border-color: var(--textDarkPink);
+            border-style: solid;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
